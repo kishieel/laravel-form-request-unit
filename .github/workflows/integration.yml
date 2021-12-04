@@ -1,0 +1,53 @@
+name: Integration
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  linter:
+    runs-on: ubuntu-20.04
+    name: PHP Linting
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: composer update --prefer-dist --no-interaction --no-progress
+      - name: Run CS Fixer
+        run: vendor/bin/php-cs-fixer fix --verbose --ansi --config cs-fixer.php --dry-run
+
+  phpunit:
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: true
+      matrix:
+        php: [7.3, 7.4, 8.0, 8.1]
+        laravel: [^7.0, ^8.0]
+        exclude:
+          - php: 8.1
+            laravel: ^7.0
+    name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }}
+    needs:
+      - linter
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip
+          tools: composer:v2
+          coverage: none
+      - name: Install Dependencies
+        run: |
+          composer require "illuminate/contracts=${{ matrix.laravel }}" --no-update
+          composer require "illuminate/support=${{ matrix.laravel }}" --no-update
+          composer require "illuminate/validation=${{ matrix.laravel }}" --no-update
+          composer update --prefer-dist --no-interaction --no-progress
+      - name: Run Tests
+        run: vendor/bin/pest
