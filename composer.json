@@ -20,15 +20,29 @@
             "email": "tkisiel5w4@yahoo.com"
         }
     ],
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test:coverage": "vendor/bin/pest --coverage"
+    },
     "require": {
         "php": "^7.3|^8.0",
         "illuminate/contracts": "^7.0|^8.0",
         "illuminate/support": "^7.0|^8.0",
         "illuminate/validation": "^7.0|^8.0"
     },
+    "require-dev": {
+        "orchestra/testbench": "^4.0|^5.0|^6.0",
+        "pestphp/pest": "^1.21",
+        "phpunit/phpunit": "^8.0|^9.3"
+    },
     "autoload": {
         "psr-4": {
             "Kishieel\\RequestUnit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kishieel\\RequestUnit\\Tests\\": "tests/"
         }
     },
     "config": {
