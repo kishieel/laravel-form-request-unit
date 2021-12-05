@@ -1,0 +1,6 @@
+<?php
+
+return [
+    'types' => ['feat', 'fix', 'build', 'chore', 'ci', 'docs', 'perf', 'refactor', 'revert', 'style', 'test'],
+    'ignoreTypes' => [],
+];
