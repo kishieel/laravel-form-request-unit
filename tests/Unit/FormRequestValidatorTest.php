@@ -1,12 +1,12 @@
 <?php
 
-namespace Kishieel\RequestUnit\Tests\Unit;
+namespace Kishieel\FormRequest\Tests\Unit;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Support\Facades\Auth;
-use Kishieel\RequestUnit\Tests\Fixture\FormRequestAuthorization;
-use Kishieel\RequestUnit\Tests\Fixture\FormRequestRules;
-use Kishieel\RequestUnit\ValidatorResponse;
+use Kishieel\FormRequest\Tests\Fixture\FormRequestAuthorization;
+use Kishieel\FormRequest\Tests\Fixture\FormRequestRules;
+use Kishieel\FormRequest\ValidatorResponse;
 
 it('should create validator', function () {
     expect($this->validator())->toBeInstanceOf(Validator::class);

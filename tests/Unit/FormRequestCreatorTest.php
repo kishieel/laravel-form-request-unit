@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Foundation\Http\FormRequest;
-use Kishieel\RequestUnit\FormRequestCreator;
+use Kishieel\FormRequest\FormRequestCreator;
 
 it('should be instance of form request', function () {
     expect(new FormRequestCreator())->toBeInstanceOf(FormRequest::class);

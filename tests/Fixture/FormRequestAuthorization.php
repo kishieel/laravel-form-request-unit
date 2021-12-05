@@ -1,6 +1,6 @@
 <?php
 
-namespace Kishieel\RequestUnit\Tests\Fixture;
+namespace Kishieel\FormRequest\Tests\Fixture;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;

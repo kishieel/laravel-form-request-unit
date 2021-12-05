@@ -1,6 +1,6 @@
 <?php
 
-uses(\Orchestra\Testbench\TestCase::class, \Kishieel\RequestUnit\FormRequestValidator::class)->in(__DIR__);
+uses(\Orchestra\Testbench\TestCase::class, \Kishieel\FormRequest\FormRequestValidator::class)->in(__DIR__);
 
 /**
  * Set the currently logged in user for the application.

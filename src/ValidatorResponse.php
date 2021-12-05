@@ -1,6 +1,6 @@
 <?php
 
-namespace Kishieel\RequestUnit;
+namespace Kishieel\FormRequest;
 
 class ValidatorResponse
 {

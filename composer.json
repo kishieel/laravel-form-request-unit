@@ -47,12 +47,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Kishieel\\RequestUnit\\": "src/"
+            "Kishieel\\FormRequest\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kishieel\\RequestUnit\\Tests\\": "tests/"
+            "Kishieel\\FormRequest\\Tests\\": "tests/"
         }
     },
     "config": {
