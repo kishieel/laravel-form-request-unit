@@ -1,7 +1,7 @@
 {
     "name": "kishieel/laravel-form-request-unit",
     "description": "Laravel FormRequest Unit Test Helper",
-    "version": "v0.1.0",
+    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "keywords": [
