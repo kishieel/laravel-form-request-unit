@@ -4,6 +4,14 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.1.1](https://github.com/kishieel/laravel-request-unit/compare/v1.1.0...v1.1.1) (2021-12-05)
+### Bug Fixes
+
+* Package description ([b0a6b4](https://github.com/kishieel/laravel-request-unit/commit/b0a6b43ecffd001825a756cfbf29311e49db50e1))
+
+
+---
+
 ## [1.1.0](https://github.com/kishieel/laravel-request-unit/compare/v1.0.0...v1.1.0) (2021-12-05)
 ### Styles
 
