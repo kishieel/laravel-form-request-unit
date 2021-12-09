@@ -4,6 +4,14 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.1.2](https://github.com/kishieel/laravel-request-unit/compare/v1.1.1...v1.1.2) (2021-12-09)
+### Code Refactoring
+
+* Exclude dev tools from registry ([d16fd4](https://github.com/kishieel/laravel-request-unit/commit/d16fd45b8895a79fd1711afb2a4416869641c25d))
+
+
+---
+
 ## [1.1.1](https://github.com/kishieel/laravel-request-unit/compare/v1.1.0...v1.1.1) (2021-12-05)
 ### Bug Fixes
 
